@@ -8,6 +8,7 @@ public class RaceCarProgress : MonoBehaviour
     public Collider finishGate;
 
     public int CompletedLaps { get; private set; }
+    public int FinishPosition { get; private set; }
     public bool Finished { get; private set; }
 
     private bool passedMiddle;
@@ -34,6 +35,7 @@ public class RaceCarProgress : MonoBehaviour
             {
                 Finished = true;
                 finishOrder++;
+                FinishPosition = finishOrder;
                 Debug.Log($"POSICIÓN {finishOrder}: {racerName} terminó la carrera");
             }
         }
