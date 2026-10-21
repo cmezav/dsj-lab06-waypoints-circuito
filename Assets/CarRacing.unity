@@ -506,8 +506,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 16.73077, y: 4.6102076, z: 3.7610765}
-  m_Center: {x: 0.13100435, y: 1.8051038, z: -0.114648096}
+  m_Size: {x: 16.73077, y: 15.425967, z: 3.7610765}
+  m_Center: {x: 0.13100435, y: 0.002477169, z: -0.114648096}
 --- !u!1 &263966839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1643,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c1c886898f94ca0833cccc2e3388a4, type: 3}
+--- !u!1 &1443834905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1443834907}
+  - component: {fileID: 1443834906}
+  m_Layer: 0
+  m_Name: Control_Mitad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1443834906
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443834905}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.73077, y: 17.156483, z: 3.7610765}
+  m_Center: {x: 0.13100433, y: 1.3003714, z: -0.1146481}
+--- !u!4 &1443834907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443834905}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0000000042039545, y: 0.3694672, z: 0.000000023287829, w: 0.9292438}
+  m_LocalPosition: {x: 40.19454, y: 0.5, z: -13.060756}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 43.366, z: 0}
 --- !u!1 &1471024115
 GameObject:
   m_ObjectHideFlags: 0
@@ -2986,6 +3039,7 @@ GameObject:
   - component: {fileID: 9048989675280529227}
   - component: {fileID: 9048989675280529229}
   - component: {fileID: 9048989675280529228}
+  - component: {fileID: 9048989675280529230}
   m_Layer: 0
   m_Name: RedTank
   m_TagString: Untagged
@@ -3274,6 +3328,7 @@ GameObject:
   - component: {fileID: 7871142010654116012}
   - component: {fileID: 7871142010654116013}
   - component: {fileID: 7871142010654116014}
+  - component: {fileID: 7871142010654116015}
   m_Layer: 0
   m_Name: YellowTank
   m_TagString: Untagged
@@ -3294,6 +3349,7 @@ GameObject:
   - component: {fileID: 7863693248642204186}
   - component: {fileID: 7863693248642204188}
   - component: {fileID: 7863693248642204187}
+  - component: {fileID: 7863693248642204189}
   m_Layer: 0
   m_Name: GreenTank
   m_TagString: Untagged
@@ -3625,6 +3681,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.568384, y: 1.9292583, z: 6.3667307}
   m_Center: {x: -0.45865706, y: 6.178584, z: -3.561697}
+--- !u!114 &7863693248642204189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591627735941132299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9188e246af45f4fb0215667eba490f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RaceCarProgress
+  racerName: Verde
+  lapsToFinish: 3
+  middleGate: {fileID: 1443834906}
+  finishGate: {fileID: 239145093}
 --- !u!4 &7871142010654116010
 Transform:
   m_ObjectHideFlags: 0
@@ -3731,6 +3803,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7871142010654116015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6584456359551941305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9188e246af45f4fb0215667eba490f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RaceCarProgress
+  racerName: Amarillo
+  lapsToFinish: 3
+  middleGate: {fileID: 1443834906}
+  finishGate: {fileID: 239145093}
 --- !u!33 &8289609732086723561
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3949,6 +4037,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.4315138, y: 1.7427359, z: 6.3565307}
   m_Center: {x: -1.3730819, y: 6.22449, z: -3.5040865}
+--- !u!114 &9048989675280529230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462622198115272026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9188e246af45f4fb0215667eba490f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RaceCarProgress
+  racerName: Rojo
+  lapsToFinish: 3
+  middleGate: {fileID: 1443834906}
+  finishGate: {fileID: 239145093}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3971,5 +4075,6 @@ SceneRoots:
   - {fileID: 1875013339}
   - {fileID: 1815355022}
   - {fileID: 239145092}
+  - {fileID: 1443834907}
   - {fileID: 738970956}
   - {fileID: 856123906}
