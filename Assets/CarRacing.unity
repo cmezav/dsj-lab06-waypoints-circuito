@@ -3682,10 +3682,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowTracker
   tracker: {fileID: 1875013339}
+  otherCars:
+  - {fileID: 9048989675280529225}
+  - {fileID: 7871142010654116010}
   speed: 18
   turnSpeed: 4
   followDistance: 2.5
   laneOffset: 0
+  avoidanceDistance: 5
+  minimumDistance: 2.5
+  avoidanceStrength: 2
 --- !u!54 &7863693248642204187
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3806,10 +3812,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowTracker
   tracker: {fileID: 1815355022}
+  otherCars:
+  - {fileID: 9048989675280529225}
+  - {fileID: 7863693248642204184}
   speed: 20
   turnSpeed: 4
   followDistance: 2.5
   laneOffset: 0
+  avoidanceDistance: 5
+  minimumDistance: 2.5
+  avoidanceStrength: 2
 --- !u!65 &7871142010654116013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4042,10 +4054,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowTracker
   tracker: {fileID: 738970956}
+  otherCars:
+  - {fileID: 7863693248642204184}
+  - {fileID: 7871142010654116010}
   speed: 19
   turnSpeed: 4
   followDistance: 2.5
   laneOffset: 0
+  avoidanceDistance: 5
+  minimumDistance: 2.5
+  avoidanceStrength: 2
 --- !u!54 &9048989675280529228
 Rigidbody:
   m_ObjectHideFlags: 0
